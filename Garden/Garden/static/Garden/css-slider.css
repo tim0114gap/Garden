@@ -1,0 +1,28 @@
+*main{
+	width: 300px;
+	height: 200px;
+	overflow: hidden;
+}
+
+.slide-item {
+	width: 300px;
+	height: 200px;
+	float: left;
+	position: relative;
+}
+
+
+.slider-wrapper {
+	width: 300%;
+	position: relative;
+	left: 0;
+	will-change: transform;
+	animation: slider 10s infinite;
+}
+
+@keyframes slider {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-300px); }
+  66% { transform: translateX(-600px); }
+  100% { transform: translateX(0); }
+}

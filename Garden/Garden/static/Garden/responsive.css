@@ -1,0 +1,25 @@
+/* 共通のレイアウト */
+
+
+
+/* タブレット向けレイアウト */
+@media all and (max-width: 1000px) {
+  /* ---------------- page1 ---------------- */
+  .features-box {
+    width: 100%;
+  }
+
+  .price-column {
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 40px;
+  }
+}
+
+/* モバイル向けレイアウト */
+@media all and (max-width: 670px) {
+
+
+
+}

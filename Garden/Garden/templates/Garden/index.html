@@ -1,0 +1,163 @@
+{% extends 'Garden/base.html' %}
+{% load static %}
+{% block content %}
+<!-- Top content -->
+    <div id="home" class="top-section">
+      <div class="inner-bg">
+        <div class="container">
+          <div class="top-description">
+            <h2>GARDENは自分と世界をつなぐ君だけの箱庭</h2>
+            <p>下のボタンを押してどうやって投稿するのか見てみよう！</p>
+          </div>
+          <div class="top-detail">
+            <a class="btn btn-top-white btn-lg" id="read-more">投稿する！</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Languages -->
+    <div id="languages" class="languages-section">
+      <div class="container">
+        <div class="section-title">
+          <h3>ランキング</h3>
+        </div>
+        <div class="languages-box-wrapper">
+          <div class="languages-box">
+            <div class="icon">
+              <img src="{% static 'Garden/images/1.png' %}" alt="My image">
+            </div>
+            <h4>English</h4>
+            <p>もじもじもじも<br>もじもじもじもじもじ</p>
+          </div>
+          <div class="languages-box">
+            <div class="icon">
+              <img src="{% static 'Garden/images/2.png' %}" alt="My image">
+            </div>
+            <h4>Korean</h4>
+            <p>ぶんぶんぶんぶんぶんぶんぶん<br>ぶんぶんぶんぶんぶんぶんぶんぶん</p>
+          </div>
+          <div class="languages-box">
+            <div class="icon">
+              <img src="{% static 'Garden/images/3.png' %}" alt="My image">
+            </div>
+            <h4>Russian</h4>
+            <p>ありがとうありがとうありがとう<br>ありがとうありがとうありがとう</p>
+          </div>
+          <div class="languages-box">
+            <div class="icon">
+              <img src="https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/lang_icons/git.png">
+            </div>
+            <h4>Japanese</h4>
+            <p>いただきますいただきます、<br>いただきますいただきます</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div id="features" class="features-section">
+      <div class="features-section-top gray-section">
+        <div class="container">
+          <div class="section-title">
+            <h3>GARDENって何？</h3>
+          </div>
+          <img class="features-image" src="{% static 'Garden/images/5.png' %}">
+        </div>
+      </div>
+      <div class="features-section-bottom">
+        <div class="container">
+          <div class="features-box">
+            <h5>① aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h5>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa。
+          </div>
+          <div class="features-box">
+            <h5>② aaaaaaaaaaaaaaaaaaaaaaaaaaaa</h5>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa。
+          </div>
+          <div class="features-box">
+            <h5>③ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h5>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+          </div>
+          <div class="features-box">
+            <h5>④ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h5>
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div class="message-section">
+      <div class="message-section-inner">
+        <div class="container">
+          <h4>ソンムンだけの交流場があってもいいんじゃない？
+            <br>- GARDEN
+          </h4>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <!-- Contact -->
+    <div id="contact" class="contact-section">
+      <div class="contact-section-inner">
+        <div class="container">
+          <div class="section-title">
+            <h3>お問い合わせ</h3>
+          </div>
+          <div class="contact-form">
+            <h4>メッセージを送る</h4>
+            <form method="post" action="{% url 'Garden:index' %}">
+              {% csrf_token %}
+              {{ form.Email }}
+              {{ form.subject }}
+              {{ form.text }}
+              <!--<input type="text" name="email" placeholder="Email" class="contact-email">
+              <input type="text" name="subject" placeholder="Subject" class="contact-subject">
+              <textarea name="message" class="form-control" placeholder="Message"></textarea>-->
+              <button type="submit" class="btn btn-contact">Submit</button>
+            </form>
+          </div>
+          <div class="contact-about">
+            <h4>About Us</h4>
+            <p>サンプルサンプルサンプルサンプルサンプルサンプルサンプル
+              サンプルサンプルサンプルサンプルサンプルサンプルサンプル
+              サンプルサンプルサンプルサンプルサンプルサンプルサンプル
+              サンプルサンプルサンプルサンプルサンプルサンプルサンプル
+              サンプルサンプルサンプル
+            </p>
+            <h4>Address</h4>
+            <p><i class="fa fa-map-marker"></i>korea asan sunmoon univ</p>
+            <p><i class="fa fa-phone"></i>Phone: 00-0000-0000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social -->
+    <div class="social-section">
+      <div class="container">
+        <div class="section-title">
+          <h3>GARDENの公式アカウントをチェック!</h3>
+        </div>
+        <div class="follow-us">
+          <a href="公式アカウントのURL" class="social-icon" target='_blank'>
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="公式アカウントのURL" class="social-icon" target='_blank'>
+            <i class="fa fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="copyright">©2018-
+        </div>
+      </div>
+    </footer>
+{% endblock %}

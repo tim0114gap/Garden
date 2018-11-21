@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GARDEN</title>
+    <link rel="shortcut icon" href="{% static 'Garden/images/5.png' %}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Dosis:300,400,500,600,700">
+    <link rel="stylesheet" href="{% static 'Garden/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'Garden/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'Garden/css-slider.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-title">
+          <a class="header-logo" href="#home">GARDEN</a>
+        </div>
+        <div class="header-menu">
+          <ul class="header-menu-right">
+            <li>
+              <a href="#languages">HOME</a>
+            </li>
+            <li>
+              <a href="#features">ABOUT</a>
+            </li>
+            <li>
+              <a href="#pricing">MyPage</a>
+            </li>
+            <li>
+              <a href="#columns">REACTION</a>
+            </li>
+            <li>
+              <a href="#contact">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

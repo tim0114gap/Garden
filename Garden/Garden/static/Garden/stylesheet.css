@@ -1,0 +1,396 @@
+/*-------  ここから共通のCSS  --------*/
+* {
+  box-sizing: border-box;
+}
+
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  color: #888;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #323a45;
+  transition: all .3s;
+}
+
+a:hover {
+  color: #0dc0c0;
+  text-decoration: none;
+}
+
+h2, h3, h4, h5, h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+h4, h5 {
+  color: #444;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-title {
+  color: #555;
+  padding-top: 70px;
+  text-align: center;
+}
+
+.section-title h3 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.gray-section {
+  background: #f4f4f4;
+}
+/*-------  ここまで共通のCSS  --------*/
+
+/*-------  ここからheader  --------*/
+header {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  line-height: 50px;
+  border-bottom: 1px solid #eee;
+  z-index: 10;
+}
+
+.header-title {
+  float: left;
+}
+
+.header-logo {
+  color: #777;
+  font-weight: 700;
+  font-size: 22px;
+  font-family: 'Dosis', sans-serif;
+}
+
+.header-menu-right {
+  float: right;
+}
+
+.header-menu-right li {
+  float: left;
+}
+
+.header-menu-right a {
+  font-weight: 700;
+  padding-left: 20px;
+}
+
+.header-menu-right a:hover {
+  color: #0dc0c0;
+  transition: color .3s;
+}
+/*-------  ここまでheader  --------*/
+
+/*-------  ここからtop content  --------*/
+.top-section {
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  background-image: url("images/pic.jpg");　//https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/backgrounds/top.jpg
+  background-size: cover;
+}
+
+.inner-bg {
+  padding-top: 210px;
+  padding-bottom: 120px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.top-description {
+  margin-bottom: 20px;
+}
+
+.top-description h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.top-description p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.btn:hover {
+  color: #fff;
+}
+
+.btn-top-white {
+  background: rgba(250, 250, 250, 0.06);
+  border: 1px solid rgba(250, 250, 250, 0.15);
+  color: rgba(250, 250, 250, 0.9);
+}
+
+.btn-top-white:hover {
+  border: 1px solid rgba(250, 250, 250, 0.8);
+}
+/*-------  ここまでtop content  --------*/
+
+/*-------  ここからlanguages  --------*/
+.languages-section {
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.languages-box-wrapper {
+  width: 85%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.languages-box {
+  float: left;
+  vertical-align: top;
+  width: 50%;
+  padding-top: 40px;
+}
+
+.languages-box .icon {
+  margin-bottom: 20px;
+}
+/*-------  ここまでlanguages  --------*/
+
+/*-------  ここからfeatures  --------*/
+.features-section-top {
+  text-align: center;
+  clear: left;
+  height: 376px;
+}
+
+.features-section-bottom {
+  padding-top: 120px;
+}
+
+.features-box {
+  float: left;
+  vertical-align: top;
+  width: 50%;
+  padding: 0 30px;
+  margin-bottom: 60px;
+}
+/*-------  ここまでfeatures  --------*/
+
+/*-------  ここからmessage  --------*/
+.message-section {
+  clear: left;
+  color: white;
+  background: url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/backgrounds/night_view.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.message-section-inner {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 140px 0;
+}
+
+.message-section h4 {
+  color: white;
+  font-size: 22px;
+  line-height: 40px;
+}
+
+
+
+}
+/*-------  ここまでmessage  --------*/
+
+/*-------  ここからpricing  --------*/
+.pricing-section {
+  padding-bottom: 100px;
+  clear: left;
+}
+
+.price-column {
+  display: inline-block;
+  vertical-align: top;
+  width: 31%;
+  padding: 15px 15px 20px 15px;
+  margin-top: 20px;
+  margin-left: 1%;
+  margin-right: 1%;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  text-align: center;
+}
+
+.price-column h2 {
+  color: #fff;
+  font-size: 24px;
+  background: #323a45;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 30px 0;
+}
+
+.price-column-green h2 {
+  background: #0dc0c0;
+}
+
+.price-column h3 {
+  color: #555;
+  background: #f0f0f0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 30px 0;
+  font-size: 28px;
+}
+
+.price-column ul {
+  padding: 20px 30px;
+}
+
+.price-column li {
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding: 25px 0;
+}
+
+.btn-black {
+  background: #323a45;
+  color: #c9d1d6;
+}
+/*-------  ここまでpricing  --------*/
+
+/*-------  ここからcontact  --------*/
+.contact-section {
+  background: url("https://s3-ap-northeast-1.amazonaws.com/progate/shared/images/lesson/html/practice/backgrounds/contact.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.contact-section-inner {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-bottom: 70px;
+}
+
+.contact-section h3, .contact-section h4 {
+  color: white;
+}
+
+.contact-section h4 {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+
+input[type="text"], textarea {
+  margin: 0;
+  padding: 0 10px;
+  vertical-align: middle;
+  background: rgba(250, 250, 250, 0.08);
+  border: none;
+  width: 85%;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 0;
+  box-shadow: none;
+  transition: all .3s;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+textarea {
+  height: 150px;
+}
+
+.contact-form {
+  display: inline-block;
+  vertical-align: top;
+  width: 58%;
+}
+
+.btn-contact {
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  background: #0dc0c0;
+  border: 1px solid #09b1b9;
+  color: white;
+  box-shadow: inset 0 1px 0 #0fc8c8;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  transition: all .3s;
+  margin: 10px 0;
+  padding: 15px 35px;
+}
+
+.contact-about {
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+}
+
+.contact-about i {
+  padding-right: 15px;
+  font-size: 18px;
+}
+
+.contact-about p {
+  margin: 0 0 24px;
+  line-height: 24px;
+}
+/*-------  ここまでcontact  --------*/
+
+/*-------  ここからsocial  --------*/
+.social-section {
+  text-align: center;
+  padding-bottom: 70px;
+}
+
+.social-icon {
+  text-align: center;
+  font-size: 36px;
+  padding: 5px;
+  transition: all .3s;
+}
+/*-------  ここまでsocial  --------*/
+
+/*-------  ここからfooter  --------*/
+footer {
+  text-align: center;
+  padding: 40px 0;
+  background: #222;
+}
+/*-------  ここまでfooter  --------*/
