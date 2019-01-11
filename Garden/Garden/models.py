@@ -8,3 +8,11 @@ class Registration(models.Model):
 
     def __str__(self):
         return self.Email
+
+class UserLists(models.Model):
+    name = models.CharField(max_length=20)
+    password = models.CharField(max_length=20)
+    Email = models.EmailField(max_length=20)
+
+    def __str__(self):
+        return self.name
