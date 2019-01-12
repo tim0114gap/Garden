@@ -9,3 +9,7 @@ class register(forms.Form):
     text = forms.CharField(widget=forms.TextInput(attrs={'type':'text','placeholder':'name'}))
     password = forms.CharField(widget=forms.PasswordInput(attrs={'type':'password','placeholder':'password'}))
     Email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder':'email address','type':'text'}))
+
+class login(forms.Form):
+    text = forms.CharField(widget=forms.TextInput(attrs={'type':'text','placeholder':'name'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'type':'password','placeholder':'password'}))
