@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Registration, UserLists
-from .forms import SentMaill, Login
+from .forms import SentMaill, register
 # Create your views here.
 
 
@@ -20,17 +20,17 @@ def index(request):
     context = {"form":forms}
     return render(request,'Garden/index.html',context)
 
-def login(request):
-    forms = Login()
+def registerAcount(request):
+    forms = register()
     if request.method == 'POST':
-        forms = Login(request.POST)
+        forms = register(request.POST)
 
         if forms.is_valid():
             new_message = UserLists(name=request.POST['text'],password=request.POST['password'],Email=request.POST['Email'])
             new_message.save()
             return redirect('Garden:index')
     else:
-        forms = Login()
+        forms = register()
 
     context = {"form":forms}
-    return render(request,'Garden/login.html',context)
+    return render(request,'Garden/registerAcount.html',context)
