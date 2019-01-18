@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
 from .models import Registration, UserLists
 from .forms import SentMaill, register, login
 # Create your views here.
@@ -26,8 +28,8 @@ def registerAcount(request):
         forms = register(request.POST)
 
         if forms.is_valid():
-            new_message = UserLists(name=request.POST['text'],password=request.POST['password'],Email=request.POST['Email'])
-            new_message.save()
+            user = User.objects.create_user(request.POST['text'],request.POST['Email'],request.POST['password'])
+            user.save()
             return redirect('Garden:index')
     else:
         forms = register()
@@ -41,9 +43,11 @@ def loginAcount(request):
         forms = login(request.POST)
 
         if forms.is_valid():
-
-
-            return redirect('Garden:index')
+            user = authenticate(request.POST['text'],request.POST['password'])
+            if user is not None:
+                return redirect('Garden:index')
+            else:
+                return redirect('Garden:loginAcount')
     else:
         forms = login()
 
