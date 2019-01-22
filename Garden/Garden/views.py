@@ -43,11 +43,14 @@ def loginAcount(request):
         forms = login(request.POST)
 
         if forms.is_valid():
-            user = authenticate(request.POST['text'],request.POST['password'])
+            username = request.POST['text']
+            password = request.POST['password']
+            user = authenticate(request, username=username, password=password)
             if user is not None:
-                return redirect('Garden:index')
-            else:
-                return redirect('Garden:loginAcount')
+                login(request, user)
+                #return redirect('Garden:index')
+            #else:
+                #return redirect('Garden:loginAcount')
     else:
         forms = login()
 
